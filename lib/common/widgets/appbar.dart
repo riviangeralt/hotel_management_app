@@ -37,16 +37,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: showBack!
           ? Padding(
               padding: EdgeInsets.only(left: 8.w),
-              child: Transform.rotate(
-                angle: 180 * 3.1415927 / 180,
-                child: CustomIconButton(
-                  height: 28.w,
-                  width: 28.w,
-                  onTap: onBack,
-                  child: Icon(
-                    Iconsax.send_1,
-                    size: 22.w,
-                    color: const Color(0xff292D32),
+              child: Transform.scale(
+                scale: .8,
+                child: Transform.rotate(
+                  angle: 180 * 3.1415927 / 180,
+                  child: CustomIconButton(
+                    height: 28.w,
+                    width: 28.w,
+                    onTap: onBack,
+                    child: Icon(
+                      Iconsax.send_1,
+                      size: 28.w,
+                      color: const Color(0xff292D32),
+                    ),
                   ),
                 ),
               ),

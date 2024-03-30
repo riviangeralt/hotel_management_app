@@ -41,9 +41,10 @@ class RegistrationFooter extends StatelessWidget {
           const SizedBox(
             height: 24.0,
           ),
-          const AuthFooter(
+          AuthFooter(
             text: "Already have an account?",
             ctaText: "Sign In",
+            onCtaClick: () => Get.back(),
           )
         ],
       ),

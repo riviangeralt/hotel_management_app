@@ -20,13 +20,13 @@ class DashboardAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: false,
       actions: [
         SizedBox(
-          width: 22.w,
-          height: 22.h,
+          width: 28.w,
+          height: 28.h,
           child: CustomIconButton(
             onTap: () => Get.to(() => const SearchBookingsScreen()),
             child: Icon(
               Iconsax.search_normal_14,
-              size: 16.5.h,
+              size: 18.h,
             ),
           ),
         ),
@@ -34,13 +34,13 @@ class DashboardAppBar extends StatelessWidget implements PreferredSizeWidget {
           width: 12.h,
         ),
         SizedBox(
-          width: 22.w,
-          height: 22.h,
+          width: 28.w,
+          height: 28.h,
           child: CustomIconButton(
             onTap: () => Get.to(() => const NotificationScreen()),
             child: Icon(
               Iconsax.notification_bing,
-              size: 16.5.h,
+              size: 18.h,
             ),
           ),
         ),
