@@ -20,6 +20,7 @@ class FeaturesNavigation extends StatelessWidget {
     final controller = Get.put(FeaturesNavigationController());
     return Obx(
       () => Scaffold(
+        backgroundColor: Colors.white,
         appBar: controller.currentScreen['appbar'],
         body: SingleChildScrollView(
           child: Padding(

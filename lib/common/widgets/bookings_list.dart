@@ -9,7 +9,7 @@ class BookingsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const bool noDataAvailable = true;
+    const bool noDataAvailable = false;
     return SizedBox(
       height: double.infinity,
       child: noDataAvailable

@@ -45,12 +45,7 @@ class AppTheme {
         borderSide: BorderSide.none,
       ),
     ),
-    segmentedButtonTheme: SegmentedButtonThemeData(
-      style: SegmentedButton.styleFrom(
-        elevation: 0,
-        shadowColor: Colors.transparent,
-      ),
-    ),
+    scaffoldBackgroundColor: Colors.white,
     useMaterial3: true,
   );
 }

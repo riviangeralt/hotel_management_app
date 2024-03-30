@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hotel_booking_app/common/widgets/appbar.dart';
-import 'package:hotel_booking_app/features/dashboard/screens/search_bookings/widgets/bookings_list.dart';
+import 'package:hotel_booking_app/common/widgets/bookings_list.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SearchBookingsScreen extends StatelessWidget {
@@ -31,15 +31,7 @@ class SearchBookingsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body:  BookingsList()
-      // Padding(
-      //   padding: EdgeInsets.all(12.sp),
-      //   child: const Column(
-      //     children: [
-      //       ,
-      //     ],
-      //   ),
-      // ),
+      body: const BookingsList(),
     );
   }
 }

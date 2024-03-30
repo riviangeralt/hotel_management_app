@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_booking_app/common/widgets/icon_button.dart';
@@ -36,8 +34,8 @@ Future<Widget?> showCityStateBottomSheet({
       });
 
       return Container(
-        height: MediaQuery.of(context).size.height * .875,
-        width: MediaQuery.of(context).size.width,
+        height: (MediaQuery.of(context).size.height * .875).h,
+        width: MediaQuery.of(context).size.width.w,
         color: Colors.white,
         child: Column(
           children: <Widget>[
@@ -46,12 +44,12 @@ Future<Widget?> showCityStateBottomSheet({
                 border: Border(
                   bottom: BorderSide(
                     color: const Color(0xFF1721EE).withOpacity(.08),
-                    width: 1,
+                    width: 1.w,
                   ),
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: EdgeInsets.all(12.h),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
