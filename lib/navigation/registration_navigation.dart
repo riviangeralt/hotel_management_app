@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hotel_booking_app/common/widgets/appbar.dart';
 import 'package:hotel_booking_app/features/auth/screens/create_pin/create_pin.dart';
@@ -45,9 +46,9 @@ class RegistrationNavigation extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 36.0,
-                  horizontal: 18.0,
+                padding:  EdgeInsets.symmetric(
+                  vertical: 36.h,
+                  horizontal: 18.w,
                 ),
                 child: controller.currentScreen['screen'],
               )

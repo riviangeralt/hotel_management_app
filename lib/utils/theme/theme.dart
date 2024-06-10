@@ -45,6 +45,14 @@ class AppTheme {
         borderSide: BorderSide.none,
       ),
     ),
+    datePickerTheme: DatePickerThemeData(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(4.h),
+      ),
+      backgroundColor: Colors.white,
+      headerBackgroundColor: Colors.white,
+      surfaceTintColor: Colors.transparent,
+    ),
     scaffoldBackgroundColor: Colors.white,
     useMaterial3: true,
   );

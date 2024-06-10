@@ -9,6 +9,7 @@ import 'package:hotel_booking_app/features/dashboard/screens/view/dashboard.dart
 import 'package:hotel_booking_app/features/dashboard/screens/view/widgets/dashboard_appbar.dart';
 import 'package:hotel_booking_app/features/room/screens/view/room.dart';
 import 'package:hotel_booking_app/features/room/screens/view/widgets/room_appbar.dart';
+import 'package:hotel_booking_app/utils/popups/add_navigation_sheet.dart';
 import 'package:hotel_booking_app/utils/text_styles/text_styles.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -37,14 +38,14 @@ class FeaturesNavigation extends StatelessWidget {
             border: Border(
               top: BorderSide(
                 color: const Color(0xFF1721EE).withOpacity(.08),
-                width: 1,
+                width: 1.w,
               ),
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 8.0,
-              horizontal: 16.0,
+            padding: EdgeInsets.symmetric(
+              vertical: 8.h,
+              horizontal: 16.w,
             ),
             child: Obx(
               () => Row(
@@ -70,11 +71,14 @@ class FeaturesNavigation extends StatelessWidget {
                       isSelected: controller.currentStep.value == 1,
                     ),
                   ),
-                  const Expanded(
-                    child: Icon(
-                      Iconsax.add_circle5,
-                      size: 36.0,
-                      color: Color(0xff001529),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () => showAddNavigationSheet(context: context),
+                      child: Icon(
+                        Iconsax.add_circle5,
+                        size: 36.h,
+                        color: const Color(0xff001529),
+                      ),
                     ),
                   ),
                   Expanded(

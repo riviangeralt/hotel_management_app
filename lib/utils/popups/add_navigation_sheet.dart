@@ -1,42 +1,37 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:hotel_booking_app/common/widgets/bottom_sheet_header.dart';
-import 'package:hotel_booking_app/utils/popups/booking_status_sheet.dart';
-import 'package:hotel_booking_app/utils/popups/customer_details_sheet.dart';
+import 'package:hotel_booking_app/features/booking/screens/add/add_booking.dart';
 import 'package:hotel_booking_app/utils/popups/no_of_days_sheet.dart';
 import 'package:hotel_booking_app/utils/text_styles/text_styles.dart';
 import 'package:iconsax/iconsax.dart';
-import 'dart:developer';
 
-Future<Widget?> showBookingDetailsSheet({
+Future<Widget?> showAddNavigationSheet({
   required BuildContext context,
 }) {
   List<Map<String, dynamic>> actionsList = [
     {
-      "title": 'View customer details',
+      "title": 'Add Rooms',
       "onTap": () {
         Navigator.pop(context);
-        showCustomerDetailsSheet(
-          context: context,
-        );
+        Get.to(() => const AddBookingScreen());
       },
     },
     {
-      "title": 'Edit no of days',
+      "title": 'Create Categories',
       "onTap": () {
         Navigator.pop(context);
-        showNoOfDaysSheet(
-          context: context,
-        );
+        Get.to(() => const AddBookingScreen());
       },
     },
     {
-      "title": 'Change Booking Status',
+      "title": 'Add Booking',
       "onTap": () {
         Navigator.pop(context);
-        showBookingStatusSheet(
-          context: context,
-        );
+        Get.to(() => const AddBookingScreen());
       },
     },
   ];
@@ -56,7 +51,7 @@ Future<Widget?> showBookingDetailsSheet({
           children: [
             BottomSheetHeader(
               innerContext: innercontext,
-              title: "More Actions",
+              title: "Create",
             ),
             ListView.builder(
               itemCount: actionsList.length,
